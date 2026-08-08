@@ -79,7 +79,9 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 git clone <your-repository-url>   
 ```
 ### rds using as a data base mens run the follwing  scripts
-```on backend dirictory run test.sql
+```
+on backend dirictory run test.sql
+
 sudo dnf install mariadb105-server -y
 
 mysql -h rds-endpoint -u admin -p < test.sql
