@@ -40,7 +40,6 @@ Store the following secrets in your GitHub repository settings:
 ---
 ## Installation Steps
 
-
 ### 4. Install Git
 
 ```bash
@@ -79,7 +78,12 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 ```bash
 git clone <your-repository-url>   
 ```
+### rds using as a data base mens run the follwing  scripts
+```on backend dirictory run test.sql
+sudo dnf install mariadb105-server -y
 
+mysql -h rds-endpoint -u admin -p < test.sql
+```
 ### Step 10 : Deploy Backend
 ```bash
 cd k8s-argocd/backend
